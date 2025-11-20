@@ -1,11 +1,11 @@
 dependecies:
   # - <Organization>/<Repository>@<version>
-  - smartcontractkit/chainlink-brownie-contracts@1.1.0
+  - smartcontractkit/chainlink-brownie-contracts@0.6.1
 
 compiler:
   solc:
     remappings:
-      - "@chainlink=smartcontractkit/chainlink-brownie-contracts@1.1.0"
+      - "@chainlink=smartcontractkit/chainlink-brownie-contracts@0.6.1"
 
 dotenv: .env
 wallets:

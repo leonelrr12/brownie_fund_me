@@ -1,13 +1,15 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.6.0;
 
-import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+import "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";
+// import "@chainlink-brownie-contracts/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol"
+
 // Evitar problemas de overflows en versiones de solidy 6 o menor.
-//import "@chainlink/contracts/src/v0.6/vendor/SafeMathChainlink,sol";
+// import "@chainlink/contracts/src/v0.8/vendor/SafeMathChainlink.sol";
 
 contract FundMe {
     // Evitar problemas de overflows en versiones de solidy 6 o menor.
-    //using SafeMathChainlink for uint256;
+    // using SafeMathChainlink for uint256;
 
     mapping(address => uint256) public addressToAmountFunded;
 
@@ -15,7 +17,7 @@ contract FundMe {
 
     address public owner;
 
-    constructor() {
+    constructor() public {
         owner = msg.sender;
     }
 
